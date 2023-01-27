@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		A5F740F129840ABE001A4F70 /* Learning_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F740F029840ABE001A4F70 /* Learning_AppApp.swift */; };
-		A5F740F329840ABE001A4F70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F740F229840ABE001A4F70 /* ContentView.swift */; };
+		A5F740F329840ABE001A4F70 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F740F229840ABE001A4F70 /* HomeView.swift */; };
 		A5F740F529840ABF001A4F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F740F429840ABF001A4F70 /* Assets.xcassets */; };
 		A5F740F829840ABF001A4F70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F740F729840ABF001A4F70 /* Preview Assets.xcassets */; };
+		A5F7410429840CDB001A4F70 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F7410329840CDB001A4F70 /* ContentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5F740ED29840ABE001A4F70 /* Learning App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learning App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F740F029840ABE001A4F70 /* Learning_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning_AppApp.swift; sourceTree = "<group>"; };
-		A5F740F229840ABE001A4F70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A5F740F229840ABE001A4F70 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A5F740F429840ABF001A4F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5F740F729840ABF001A4F70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A5F7410329840CDB001A4F70 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,11 @@
 			isa = PBXGroup;
 			children = (
 				A5F740F029840ABE001A4F70 /* Learning_AppApp.swift */,
-				A5F740F229840ABE001A4F70 /* ContentView.swift */,
+				A5F7410029840C22001A4F70 /* Model */,
+				A5F740FE29840C06001A4F70 /* View */,
+				A5F740FF29840C0D001A4F70 /* View Model */,
+				A5F7410229840C69001A4F70 /* Helpers */,
+				A5F7410129840C53001A4F70 /* Resources */,
 				A5F740F429840ABF001A4F70 /* Assets.xcassets */,
 				A5F740F629840ABF001A4F70 /* Preview Content */,
 			);
@@ -65,6 +71,43 @@
 				A5F740F729840ABF001A4F70 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A5F740FE29840C06001A4F70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5F740F229840ABE001A4F70 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5F740FF29840C0D001A4F70 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5F7410329840CDB001A4F70 /* ContentModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		A5F7410029840C22001A4F70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A5F7410129840C53001A4F70 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A5F7410229840C69001A4F70 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F740F329840ABE001A4F70 /* ContentView.swift in Sources */,
+				A5F740F329840ABE001A4F70 /* HomeView.swift in Sources */,
 				A5F740F129840ABE001A4F70 /* Learning_AppApp.swift in Sources */,
+				A5F7410429840CDB001A4F70 /* ContentModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
