@@ -12,6 +12,9 @@
 		A5F740F529840ABF001A4F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F740F429840ABF001A4F70 /* Assets.xcassets */; };
 		A5F740F829840ABF001A4F70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F740F729840ABF001A4F70 /* Preview Assets.xcassets */; };
 		A5F7410429840CDB001A4F70 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F7410329840CDB001A4F70 /* ContentModel.swift */; };
+		A5F74106298434A9001A4F70 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A5F74105298434A9001A4F70 /* data.json */; };
+		A5F7410829843556001A4F70 /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = A5F7410729843556001A4F70 /* style.html */; };
+		A5F7410A29843A61001A4F70 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F7410929843A61001A4F70 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		A5F740F429840ABF001A4F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5F740F729840ABF001A4F70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A5F7410329840CDB001A4F70 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		A5F74105298434A9001A4F70 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		A5F7410729843556001A4F70 /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
+		A5F7410929843A61001A4F70 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 		A5F7410029840C22001A4F70 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A5F7410929843A61001A4F70 /* Models.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,6 +106,8 @@
 		A5F7410129840C53001A4F70 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5F74105298434A9001A4F70 /* data.json */,
+				A5F7410729843556001A4F70 /* style.html */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -169,6 +178,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5F740F829840ABF001A4F70 /* Preview Assets.xcassets in Resources */,
+				A5F74106298434A9001A4F70 /* data.json in Resources */,
+				A5F7410829843556001A4F70 /* style.html in Resources */,
 				A5F740F529840ABF001A4F70 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +194,7 @@
 				A5F740F329840ABE001A4F70 /* HomeView.swift in Sources */,
 				A5F740F129840ABE001A4F70 /* Learning_AppApp.swift in Sources */,
 				A5F7410429840CDB001A4F70 /* ContentModel.swift in Sources */,
+				A5F7410A29843A61001A4F70 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
