@@ -15,6 +15,7 @@
 		A5F74106298434A9001A4F70 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A5F74105298434A9001A4F70 /* data.json */; };
 		A5F7410829843556001A4F70 /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = A5F7410729843556001A4F70 /* style.html */; };
 		A5F7410A29843A61001A4F70 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F7410929843A61001A4F70 /* Models.swift */; };
+		A5F7410C29851C54001A4F70 /* HomeViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F7410B29851C54001A4F70 /* HomeViewCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A5F74105298434A9001A4F70 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A5F7410729843556001A4F70 /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
 		A5F7410929843A61001A4F70 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A5F7410B29851C54001A4F70 /* HomeViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				A5F740F229840ABE001A4F70 /* HomeView.swift */,
+				A5F7410B29851C54001A4F70 /* HomeViewCard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				A5F740F129840ABE001A4F70 /* Learning_AppApp.swift in Sources */,
 				A5F7410429840CDB001A4F70 /* ContentModel.swift in Sources */,
 				A5F7410A29843A61001A4F70 /* Models.swift in Sources */,
+				A5F7410C29851C54001A4F70 /* HomeViewCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
