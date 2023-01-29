@@ -10,7 +10,12 @@ import Foundation
 class ContentModel: ObservableObject{
     
     @Published var modules = [Module]()
+    @Published var currentModule: Module?
+    var selectedModuleIndex = 0
+    
+    
     var styleData: Data?
+    
     
     
     init(){
@@ -41,6 +46,23 @@ class ContentModel: ObservableObject{
             print("error parsing style data")
         }
         
+    }
+    
+    func beginModule(_ moduleId:Int){
+        for i in 0..<modules.count{
+            if modules[i].id == moduleId{
+                selectedModuleIndex = i
+                currentModule = modules[selectedModuleIndex]
+                break
+            }
+            
+            
+        }
+        
+        
+    }
+    func testFunc(){
+        print("test func ran")
     }
     
 }

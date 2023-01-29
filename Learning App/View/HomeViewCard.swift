@@ -22,7 +22,7 @@ struct HomeViewCard: View {
                         Text(title)
                             .font(.title2)
                             .fontWeight(.semibold).padding(.bottom, 2.0)
-                        Text(descirption).padding(.trailing,20).font(.system(size: 15))
+                        Text(descirption).multilineTextAlignment(.leading).padding(.trailing,20).font(.system(size: 15))
                         HStack{
                             Image(systemName: "text.book.closed").resizable().frame(width: 15, height: 15)
                             Text(count)
@@ -33,7 +33,7 @@ struct HomeViewCard: View {
                             
                         }.padding(.trailing,25)
                     
-                    }
+                    }.foregroundColor(.black)
                 }
                 
             }

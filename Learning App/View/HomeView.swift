@@ -15,12 +15,24 @@ struct HomeView: View {
                 Text("What are we learning today?").padding(.leading, 20)
                 ScrollView{
                     LazyVStack{
-                        ForEach(model.modules){ i in
+                        ForEach(model.modules){ module in
                             VStack(spacing: 20){
+                                NavigationLink(
+                                    destination:
+                                        ContentViewMain()
+                                        .onAppear(perform: {
+                                            model.beginModule(module.id)
+                                        }),
+                                    label: {
+                                        
+                                        // Learning Card
+                                        HomeViewCard(image: module.content.image, title: "Learn \(module.category)", descirption: module.content.description, count: "\(module.content.lessons.count) Lessons", time: module.content.time)
+                                        
+                                    })
+
                                 
-                                HomeViewCard(image: i.content.image, title:"Learn \(i.category)" , descirption:i.content.description, count: "\(i.content.lessons.count) Lessons", time: i.content.time)
                                 
-                                HomeViewCard(image: i.test.image, title:"\(i.category) Test" , descirption:i.test.description, count: "\(i.test.questions.count) Questions", time: i.test.time)
+                                HomeViewCard(image: module.test.image, title:"\(module.category) Test" , descirption:module.test.description, count: "\(module.test.questions.count) Questions", time: module.test.time)
                             }
                             
                         }
@@ -32,7 +44,7 @@ struct HomeView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         let model = ContentModel()
         HomeView().environmentObject(model)
