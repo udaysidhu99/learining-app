@@ -12,6 +12,8 @@ class ContentModel: ObservableObject{
     @Published var modules = [Module]()
     @Published var currentModule: Module?
     var selectedModuleIndex = 0
+    @Published var currentLesson:Lesson?
+    var selectedLessonIndex = 0
     
     
     var styleData: Data?
@@ -55,14 +57,43 @@ class ContentModel: ObservableObject{
                 currentModule = modules[selectedModuleIndex]
                 break
             }
-            
-            
+        }
+    }
+    func beginLesson(_ lessonIndex:Int){
+        if lessonIndex < currentModule!.content.lessons.count{
+            selectedLessonIndex = lessonIndex
         }
         
+        else{
+            selectedLessonIndex = 0
+        }
         
+        currentLesson = currentModule!.content.lessons[selectedLessonIndex]
     }
-    func testFunc(){
-        print("test func ran")
+    
+    func goNextLesson(){
+        if selectedLessonIndex < currentModule!.content.lessons.count - 1{
+            selectedLessonIndex += 1
+            currentLesson = currentModule!.content.lessons[selectedLessonIndex]
+        }
+        else
+        {
+            selectedLessonIndex = 0
+            currentLesson = nil
+        }
+    }
+    
+    func hasNextLesson() -> Bool{
+        
+        if selectedLessonIndex < currentModule!.content.lessons.count - 1{
+            return true
+        }
+        
+        else{
+            return false
+        }
+    
     }
     
 }
+
