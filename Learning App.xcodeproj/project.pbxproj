@@ -11,6 +11,8 @@
 		A538C38B2989652300234BD7 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538C38A2989652300234BD7 /* ContentDetailView.swift */; };
 		A538C38E29896C9F00234BD7 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A538C38D29896C9F00234BD7 /* AVKit.framework */; };
 		A538C39029896D4100234BD7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538C38F29896D4100234BD7 /* Constants.swift */; };
+		A538C392298D4BA900234BD7 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538C391298D4BA900234BD7 /* CodeTextView.swift */; };
+		A538C394298D791400234BD7 /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538C393298D791400234BD7 /* RectangleButton.swift */; };
 		A5F740F129840ABE001A4F70 /* Learning_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F740F029840ABE001A4F70 /* Learning_AppApp.swift */; };
 		A5F740F329840ABE001A4F70 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F740F229840ABE001A4F70 /* HomeView.swift */; };
 		A5F740F529840ABF001A4F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F740F429840ABF001A4F70 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		A538C38A2989652300234BD7 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		A538C38D29896C9F00234BD7 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		A538C38F29896D4100234BD7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A538C391298D4BA900234BD7 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
+		A538C393298D791400234BD7 /* RectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
 		A5F740ED29840ABE001A4F70 /* Learning App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learning App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F740F029840ABE001A4F70 /* Learning_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning_AppApp.swift; sourceTree = "<group>"; };
 		A5F740F229840ABE001A4F70 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				A538C38A2989652300234BD7 /* ContentDetailView.swift */,
 				A5F7410B29851C54001A4F70 /* HomeViewCard.swift */,
 				A5F7410F29855AE9001A4F70 /* ContentViewCard.swift */,
+				A538C391298D4BA900234BD7 /* CodeTextView.swift */,
+				A538C393298D791400234BD7 /* RectangleButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,10 +226,12 @@
 			files = (
 				A5F740F329840ABE001A4F70 /* HomeView.swift in Sources */,
 				A5F740F129840ABE001A4F70 /* Learning_AppApp.swift in Sources */,
+				A538C394298D791400234BD7 /* RectangleButton.swift in Sources */,
 				A5F7411029855AE9001A4F70 /* ContentViewCard.swift in Sources */,
 				A538C38B2989652300234BD7 /* ContentDetailView.swift in Sources */,
 				A5F7410429840CDB001A4F70 /* ContentModel.swift in Sources */,
 				A5F7410A29843A61001A4F70 /* Models.swift in Sources */,
+				A538C392298D4BA900234BD7 /* CodeTextView.swift in Sources */,
 				A5F7410C29851C54001A4F70 /* HomeViewCard.swift in Sources */,
 				A538C389298645B800234BD7 /* ContentViewMain.swift in Sources */,
 				A538C39029896D4100234BD7 /* Constants.swift in Sources */,

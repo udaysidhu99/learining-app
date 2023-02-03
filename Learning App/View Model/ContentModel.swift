@@ -14,6 +14,8 @@ class ContentModel: ObservableObject{
     var selectedModuleIndex = 0
     @Published var currentLesson:Lesson?
     var selectedLessonIndex = 0
+    @Published var lessonDescription = NSAttributedString()
+    @Published var currentContentSelected:Int?
     
     
     var styleData: Data?
@@ -69,12 +71,14 @@ class ContentModel: ObservableObject{
         }
         
         currentLesson = currentModule!.content.lessons[selectedLessonIndex]
+        lessonDescription = addStyling(currentLesson!.explanation)
     }
     
     func goNextLesson(){
         if selectedLessonIndex < currentModule!.content.lessons.count - 1{
             selectedLessonIndex += 1
             currentLesson = currentModule!.content.lessons[selectedLessonIndex]
+            lessonDescription = addStyling(currentLesson!.explanation)
         }
         else
         {
@@ -93,6 +97,22 @@ class ContentModel: ObservableObject{
             return false
         }
     
+    }
+    
+    private func addStyling(_ htmlString: String) -> NSAttributedString{
+        var resultString = NSAttributedString()
+        var data = Data()
+        if styleData != nil{
+            data.append(styleData!)
+        }
+        
+        data.append(Data(htmlString.utf8))
+        do{
+            if let attributedString = try? NSAttributedString(data:data, options: [.documentType:NSAttributedString.DocumentType.html], documentAttributes: nil){
+                resultString = attributedString
+            }
+        }
+        return resultString
     }
     
 }

@@ -18,21 +18,40 @@ struct ContentDetailView: View {
             if url != nil{
                 VideoPlayer(player: AVPlayer(url: url!))
                 
+                CodeTextView()
+                
+                
                 if model.hasNextLesson(){
                     Button {
                         model.goNextLesson()
                     } label: {
                         
                         ZStack {
-                            Rectangle().frame(height: 48).cornerRadius(5).foregroundColor(.green).shadow(radius: 5)
+                            RectangleButton(color: .green)
                             Text("Next Lesson: \(model.currentModule!.content.lessons[model.selectedLessonIndex + 1].title)").fontWeight(.heavy).foregroundColor(.white)
                         }
                     }
 
                 }
+                else{
+                    Button {
+                        model.currentContentSelected = nil
+                    } label: {
+                        
+                        ZStack {
+                            RectangleButton(color: .green)
+                            Text("Completed").fontWeight(.heavy).foregroundColor(.white)
+                        }
+                    }
+                    
+                }
+                
+                
         }
             
+            
         }.padding()
+            .navigationBarTitle(lesson?.title ?? "")
         
     }
 }
