@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50132E7298E89EF0081454C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50132E6298E89EF0081454C /* TestView.swift */; };
 		A538C389298645B800234BD7 /* ContentViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538C388298645B800234BD7 /* ContentViewMain.swift */; };
 		A538C38B2989652300234BD7 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538C38A2989652300234BD7 /* ContentDetailView.swift */; };
 		A538C38E29896C9F00234BD7 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A538C38D29896C9F00234BD7 /* AVKit.framework */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A50132E6298E89EF0081454C /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		A538C388298645B800234BD7 /* ContentViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewMain.swift; sourceTree = "<group>"; };
 		A538C38A2989652300234BD7 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		A538C38D29896C9F00234BD7 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -113,6 +115,7 @@
 				A538C38A2989652300234BD7 /* ContentDetailView.swift */,
 				A5F7410B29851C54001A4F70 /* HomeViewCard.swift */,
 				A5F7410F29855AE9001A4F70 /* ContentViewCard.swift */,
+				A50132E6298E89EF0081454C /* TestView.swift */,
 				A538C391298D4BA900234BD7 /* CodeTextView.swift */,
 				A538C393298D791400234BD7 /* RectangleButton.swift */,
 			);
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50132E7298E89EF0081454C /* TestView.swift in Sources */,
 				A5F740F329840ABE001A4F70 /* HomeView.swift in Sources */,
 				A5F740F129840ABE001A4F70 /* Learning_AppApp.swift in Sources */,
 				A538C394298D791400234BD7 /* RectangleButton.swift in Sources */,

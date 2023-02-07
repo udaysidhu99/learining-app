@@ -16,6 +16,9 @@ class ContentModel: ObservableObject{
     var selectedLessonIndex = 0
     @Published var lessonDescription = NSAttributedString()
     @Published var currentContentSelected:Int?
+    @Published var currentTestSelected:Int?
+    @Published var currentQuestion:Question?
+    var selectedQuestionIndex = 0
     
     
     var styleData: Data?
@@ -99,7 +102,20 @@ class ContentModel: ObservableObject{
     
     }
     
-    private func addStyling(_ htmlString: String) -> NSAttributedString{
+    func beginTest(_ moduleId:Int){
+        beginModule(moduleId)
+        selectedQuestionIndex = 0
+        if currentModule?.test.questions.count ?? 0 > 0{
+            currentQuestion = currentModule!.test.questions[selectedQuestionIndex]
+            lessonDescription = addStyling(currentQuestion?.content ?? "")
+        }
+    }
+    
+    
+    
+    
+    private
+    func addStyling(_ htmlString: String) -> NSAttributedString{
         var resultString = NSAttributedString()
         var data = Data()
         if styleData != nil{

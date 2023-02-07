@@ -22,19 +22,23 @@ struct HomeView: View {
                                         ContentViewMain()
                                         .onAppear(perform: {
                                             model.beginModule(module.id)
+                                            print("func 1 active")
                                         }),
                                     tag: module.id,
-                                    selection: $model.currentContentSelected,
-                                    label: {
-                                        
+                                    selection: $model.currentContentSelected){
                                         // Learning Card
                                         HomeViewCard(image: module.content.image, title: "Learn \(module.category)", descirption: module.content.description, count: "\(module.content.lessons.count) Lessons", time: module.content.time)
                                         
-                                    })
-
+                                    }
+                                NavigationLink(destination:TestView().onAppear(perform: {
+                                    model.beginTest(module.id)
+                                    print("func 2 active")
+                                }),
+                                               tag: module.id,
+                                               selection: $model.currentTestSelected){
+                                    HomeViewCard(image: module.test.image, title:"\(module.category) Test" , descirption:module.test.description, count: "\(module.test.questions.count) Questions", time: module.test.time)
+                                }
                                 
-                                
-                                HomeViewCard(image: module.test.image, title:"\(module.category) Test" , descirption:module.test.description, count: "\(module.test.questions.count) Questions", time: module.test.time)
                             }
                             
                         }
