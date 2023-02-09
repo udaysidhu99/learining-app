@@ -12,11 +12,12 @@ struct TestView: View {
     @State var selectedAnswerIndex = -1
     @State var numCorrect = 0
     @State var isSubmitted = false
+    @State var questionNumber = 1
     var body: some View {
         VStack{
             if model.currentQuestion != nil{
                 VStack(alignment:.leading){
-                    Text("Question \(model.selectedLessonIndex + 1) of \(model.currentModule?.test.questions.count ?? 0) ")
+                    Text("Question \(questionNumber) of \(model.currentModule?.test.questions.count ?? 0) ")
                     CodeTextView()
                     
                     ScrollView{
@@ -61,19 +62,50 @@ struct TestView: View {
                             
                         }
                     }
+            
+                 
                     
+                    if isSubmitted == true &&  model.currentModule!.test.questions.count == model.selectedQuestionIndex + 1{
+                        
+                        Button {
+                            
+                        } label: {
+                            ZStack{
+                                RectangleButton(color: .orange)
+                                Text("Finish").foregroundColor(.white).bold()
+                            }.padding(.horizontal, 3)
+                        }
+                        
+                        
+                    }
+                    else if isSubmitted == true{
+                        Button {
+                            model.goNextQuestion()
+                            isSubmitted = false
+                            selectedAnswerIndex = -1
+                            questionNumber += 1
+                        } label: {
+                            ZStack{
+                                RectangleButton(color: .orange)
+                                Text("Next").foregroundColor(.white).bold()
+                            }.padding(.horizontal, 3)
+                        }
+
+                    }
                     
-                    Button {
-                        if model.currentQuestion!.correctIndex == selectedAnswerIndex{
-                            numCorrect += 1
+                    else{
+                        Button {
+                            if model.currentQuestion!.correctIndex == selectedAnswerIndex{
+                                numCorrect += 1
                             }
-                        isSubmitted = true
-                    } label: {
-                        ZStack{
-                            RectangleButton(color: .green)
-                            Text("Submit").foregroundColor(.white).bold()
-                        }.padding(.horizontal, 3)
-                    }.disabled(selectedAnswerIndex == -1)
+                            isSubmitted = true
+                        } label: {
+                            ZStack{
+                                RectangleButton(color: .green)
+                                Text("Submit").foregroundColor(.white).bold()
+                            }.padding(.horizontal, 3)
+                        }.disabled(selectedAnswerIndex == -1)
+                    }
                 }.navigationTitle("\(model.currentModule?.category ?? "") Test").padding(.horizontal)
                     .accentColor(.black)
 

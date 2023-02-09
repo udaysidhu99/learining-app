@@ -90,6 +90,18 @@ class ContentModel: ObservableObject{
         }
     }
     
+    func goNextQuestion(){
+        if selectedQuestionIndex < currentModule!.test.questions.count {
+            selectedQuestionIndex += 1
+            currentQuestion = currentModule!.test.questions[selectedQuestionIndex]
+            lessonDescription = addStyling(currentQuestion?.content ?? "")
+        }
+        else{
+            selectedQuestionIndex = 0
+            currentQuestion = nil
+        }
+    }
+    
     func hasNextLesson() -> Bool{
         
         if selectedLessonIndex < currentModule!.content.lessons.count - 1{
