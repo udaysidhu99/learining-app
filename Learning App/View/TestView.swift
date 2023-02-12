@@ -68,7 +68,7 @@ struct TestView: View {
                     if isSubmitted == true &&  model.currentModule!.test.questions.count == model.selectedQuestionIndex + 1{
                         
                         Button {
-                            
+                            model.currentQuestion =  nil
                         } label: {
                             ZStack{
                                 RectangleButton(color: .orange)
@@ -113,7 +113,7 @@ struct TestView: View {
             }
             
             else{
-                ProgressView()
+                TestResultView(score: numCorrect, numberOfQuestions: model.currentModule?.test.questions.count ?? 0)
             }
         }
     }

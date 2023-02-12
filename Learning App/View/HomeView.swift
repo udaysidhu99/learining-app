@@ -39,12 +39,12 @@ struct HomeView: View {
                                     HomeViewCard(image: module.test.image, title:"\(module.category) Test" , descirption:module.test.description, count: "\(module.test.questions.count) Questions", time: module.test.time)
                                 }
                                 
-                            }
+                            }.padding(.vertical, 7)
                             
                         }
                     }
                 }
-                .padding()
+                .padding(.top, 20).padding(.horizontal)
             }.navigationTitle("Get Started")
         }.navigationViewStyle(.stack)
     }

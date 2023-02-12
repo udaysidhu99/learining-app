@@ -27,6 +27,8 @@ class ContentModel: ObservableObject{
     
     init(){
         getLocalData()
+        
+        getRemoteData()
     }
     func getLocalData(){
         
@@ -52,6 +54,39 @@ class ContentModel: ObservableObject{
         catch{
             print("error parsing style data")
         }
+        
+    }
+    
+    func getRemoteData(){
+        let urlString = "https://udaysidhu99.github.io/LearningApp-data/data2.json"
+        let url = URL(string: urlString)
+        guard url != nil else{
+            // couldn't create URL
+            return
+        }
+        //Create URL request object
+        let request = URLRequest(url: url!)
+        //Get the session and kick off the task
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request) { data, response, error in
+            //check for error
+            guard error == nil else {
+                return
+            }
+            do{
+                let decoder = JSONDecoder()
+                let modules = try decoder.decode([Module].self, from: data!)
+                //append parsed modules to the existing array
+                self.modules += modules
+            }
+            
+            catch{
+                print("couldn't parse json")
+            }
+            
+        }
+        
+        dataTask.resume()
         
     }
     
